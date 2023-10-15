@@ -28,7 +28,13 @@ aws-vault exec <profile> -- zsh
 
 ## Configuration
 
+### Running out of time threshold
+
 The segment notifies (by changing segment's background color) when AWS session is running out of time and expires soon. By default this threshold is 5 minutes. It can be changed by setting `POWERLEVEL9K_AWS_VAULT_RUNNING_OUT_THRESHOLD_MINUTES` in `~/.zshrc`.
+
+### Colors and icons
+
+Segment has three states `WORKING`, `RUNNING_OUT`, and `EXPIRED`. You can adjust segment's appearance by setting the following environment variables in `~/.zshrc`: `POWERLEVEL9K_AWS_VAULT_{WORKING|RUNNING_OUT|EXPIRED}_{BACKGROUND|FOREGROUND|CONTENT_EXPANSION|VISUAL_IDENTIFIER_EXPANSION}` for background color, foreground color, text of the segment, and segment's icon respectively.
 
 
 [aws-vault]: https://github.com/99designs/aws-vault
