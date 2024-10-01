@@ -8,7 +8,7 @@ Download the plugin by cloning this repository:
 
 ```shell
 git clone https://github.com/higher68/p10k-aws-vault-segment-for-gnu.git ~/.oh-my-zsh/custom/plugins/p10k-aws-vault-segment-for-gnu/
-
+```
 Edit ~/.zshrc by registering the new plugin: plugins=(... p10k-aws-vault-segment-for-gnu), and specifying where the new aws-vault segment will be presented, e.g. POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(aws_vault dir vcs). You can choose either POWERLEVEL9K_LEFT_PROMPT_ELEMENTS or POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS.
 
 Existing prompt elements can be discovered by executing:
