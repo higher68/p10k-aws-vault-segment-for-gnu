@@ -25,10 +25,10 @@ function prompt_aws_vault() {
 
   # Switch the display segment based on the expiration status
   if [ "$seconds_until_expiration" -le 0 ]; then
-    p10k segment -s EXPIRED -b red -f white -i '☀️' -t " $AWS_VAULT"
+    p10k segment -s EXPIRED -b red -f white -i '🌧️' -t " $AWS_VAULT"
   elif [ "$minutes_until_expiration" -lt "${POWERLEVEL9K_AWS_VAULT_RUNNING_OUT_THRESHOLD_MINUTES:-5}" ]; then
     p10k segment -s RUNNING_OUT -b red -f white -i '⛅' -t " $AWS_VAULT"
   else
-    p10k segment -s WORKING -b yellow -i '☁️' -t " $AWS_VAULT"
+    p10k segment -s WORKING -b yellow -i '☀️' -t " $AWS_VAULT"
   fi
 }
