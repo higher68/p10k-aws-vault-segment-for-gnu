@@ -1,17 +1,15 @@
-# Powerlevel10k `aws-vault` segment
+# Powerlevel10k `aws-vault` segment (GNU Compatibility)
 
-When using [`aws-vault`][aws-vault] to start a `zsh` for AWS session by running `aws-vault exec <profile> -- zsh` this plugin provides indicator in [Powerlevel10k theme][p10k]'s prompt what AWS profile is currently on and notifies in case the session expires.
-
+This repository is a fork of the original [p10k-aws-vault-segment GitLab repository](https://gitlab.com/jonas-l/p10k-aws-vault-segment), modified for GNU compatibility. When using [`aws-vault`][aws-vault] to start a `zsh` for AWS session by running `aws-vault exec <profile> -- zsh`, this plugin provides an indicator in the [Powerlevel10k theme][p10k]'s prompt showing which AWS profile is currently active and notifies the user if the session is about to expire or has already expired.
 
 ## Installation
 
-Download plugin by cloning this repository:
+Download the plugin by cloning this repository:
 
 ```shell
-git clone https://gitlab.com/jonas-l/p10k-aws-vault-segment.git ~/.oh-my-zsh/custom/plugins/p10k-aws-vault-segment/
-```
+git clone https://github.com/higher68/p10k-aws-vault-segment-for-gnu.git ~/.oh-my-zsh/custom/plugins/p10k-aws-vault-segment-for-gnu/
 
-Edit `~/.zshrc` by registering a new plugin: `plugins=(... p10k-aws-vault-segment)`, and specifying where new `aws-vault` segment will be presented, e.g. `POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(aws_vault dir vcs)`. You can choose either `POWERLEVEL9K_LEFT_PROMPT_ELEMENTS` or `POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS`.
+Edit ~/.zshrc by registering the new plugin: plugins=(... p10k-aws-vault-segment-for-gnu), and specifying where the new aws-vault segment will be presented, e.g. POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(aws_vault dir vcs). You can choose either POWERLEVEL9K_LEFT_PROMPT_ELEMENTS or POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS.
 
 Existing prompt elements can be discovered by executing:
 
